@@ -1401,11 +1401,7 @@ img {
   line-height: 26px;
   color: #000000;
 }
-.contact-info__input:hover {
-  background-color: #e5e5e5;
-}
 .contact-info__input:focus {
-  background-color: #ffffff;
   border: 4px solid #e5e5e5;
   border-right: none;
   padding: 12px 16px;
@@ -1418,6 +1414,18 @@ img {
 .contact-info__input--mail {
   background: url('../img/i-mail.svg') no-repeat right 16px center, linear-gradient(to left, #e6e6e6 58px, #f2f2f2 58px);
   background-size: 26px auto, auto;
+}
+.contact-info__input--phone:hover {
+  background-image: url('../img/i-phone.svg'), linear-gradient(to left, #e6e6e6 58px, #e5e5e5 58px);
+}
+.contact-info__input--phone:focus {
+  background-image: url('../img/i-phone.svg'), linear-gradient(to left, #e6e6e6 58px, #ffffff 58px);
+}
+.contact-info__input--mail:hover {
+  background-image: url('../img/i-mail.svg'), linear-gradient(to left, #e6e6e6 58px, #e5e5e5 58px);
+}
+.contact-info__input--mail:focus {
+  background-image: url('../img/i-mail.svg'), linear-gradient(to left, #e6e6e6 58px, #ffffff 58px);
 }
 .contact-info__notification {
   visibility: hidden;
@@ -2039,8 +2047,6 @@ img {
   margin: 0 auto;
   width: 320px;
   height: 200px;
-}
-.video__item[poster] {
   background: url('../img/video-poster-m.jpg') no-repeat;
   background-size: 100% 100%;
 }
@@ -2206,8 +2212,6 @@ img {
   .video__item {
     width: 648px;
     height: 500px;
-  }
-  .video__item[poster] {
     background-image: url('../img/video-poster-t.jpg');
   }
   .video__controls {
@@ -2301,11 +2305,9 @@ img {
   .video {
     margin-top: 68px;
   }
-  .video__item[poster] {
-    background-image: url('../img/video-poster-d.jpg');
-  }
   .video__item {
     width: 800px;
+    background-image: url('../img/video-poster-d.jpg');
   }
   .video__controls {
     width: 730px;

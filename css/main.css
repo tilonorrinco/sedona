@@ -613,6 +613,7 @@ img {
   }
   .navigation__list {
     display: flex;
+    flex-wrap: wrap;
   }
   .navigation__item {
     width: 20%;
@@ -642,8 +643,9 @@ img {
   .navigation__item--active .navigation__link:active {
     color: rgba(118, 99, 87, 0.3);
   }
-  .navigation__item:nth-of-type(2) {
-    margin-right: auto;
+  .navigation__item:nth-of-type(4n + 2) {
+    /*нужно для того, чтобы пункты меню не заходили под логотип*/
+    margin-right: 20%;
   }
   .navigation__item:last-child .navigation__link {
     background-image: none;
@@ -943,16 +945,14 @@ img {
   }
   .features {
     display: flex;
+    flex-wrap: wrap;
     width: 100%;
     padding: 55px 0;
     padding-bottom: 33px;
   }
   .features__item {
-    box-sizing: border-box;
-    flex-basis: 256px;
-    flex-grow: 1;
-    flex-shrink: 1;
-    /*изменил на 1, т.к. в ie11 почему-то не работает box-sizing: border-box. Погуглить, почему*/
+    width: 21.3333%;
+    flex-shrink: 0;
     margin-left: 0;
     padding-left: 6%;
     padding-right: 6%;
@@ -1026,6 +1026,7 @@ img {
   .features__item {
     padding-right: 4%;
     padding-left: 4%;
+    width: 25.3333%;
   }
 }
 .hotel {
@@ -1268,7 +1269,6 @@ img {
   .copyright {
     flex-basis: 256px;
     flex-grow: 1;
-    flex-shrink: 0;
     margin: 0;
     text-align: center;
   }
